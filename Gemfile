@@ -25,9 +25,6 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-#looking good errors
-gem 'better_errors', '~> 2.9', '>= 2.9.1'
-
 #helps with css like bootstrap does
 gem 'bulma-rails', '~> 0.9.1'
 
@@ -52,8 +49,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  gem 'guard', '~> 2.18'
+  gem 'guard', '~> 2.18', require: false
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+
+  #looking good errors
+gem 'better_errors', '~> 2.9', '>= 2.9.1'
 end
 
 group :test do
