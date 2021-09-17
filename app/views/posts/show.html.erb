@@ -1,4 +1,4 @@
-<% content_for :page_title, @post.title %>
+<% content_for :page_title, "Create a new post" %>
 
 <section class="section">
 	<div class="container">
@@ -23,6 +23,19 @@
 
 		<div class="content">
 			<%= @post.content %>
+		</div>
+	</div>
+</section>
+
+
+<section class="section comments">
+	<div class="container">
+		<h2 class="subtitle is-5"><strong><%= @post.comments.count %></strong> Comments</h2>
+		<%= render @post.comments %>
+		<div class="comment-form">
+			<hr />
+			<h3 class="subtitle is-3">Leave a reply</h3>
+	 		<%= render 'comments/form' %>
 		</div>
 	</div>
 </section>
